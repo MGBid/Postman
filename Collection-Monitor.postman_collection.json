@@ -1,0 +1,185 @@
+{
+	"info": {
+		"_postman_id": "002d5ff5-c1b3-47bc-a82c-c6fbce4df5da",
+		"name": "Collection-Monitor",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "8654832"
+	},
+	"item": [
+		{
+			"name": "Workflow",
+			"item": [
+				{
+					"name": "Peticion-1",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"postman.setNextRequest(\"Peticion-3\");"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url-echo}}/get?foo_1=Hello&foo_2=Goodbye",
+							"host": [
+								"{{url-echo}}"
+							],
+							"path": [
+								"get"
+							],
+							"query": [
+								{
+									"key": "foo_1",
+									"value": "Hello"
+								},
+								{
+									"key": "foo_2",
+									"value": "Goodbye"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Peticion-2",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"postman.setNextRequest(null);"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url-echo}}/get?id=658",
+							"host": [
+								"{{url-echo}}"
+							],
+							"path": [
+								"get"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "658"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Peticion-3",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"postman.setNextRequest(\"Peticion-5\");"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url-echo}}/get?name=Jane&age=33&city=NY",
+							"host": [
+								"{{url-echo}}"
+							],
+							"path": [
+								"get"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "Jane"
+								},
+								{
+									"key": "age",
+									"value": "33"
+								},
+								{
+									"key": "city",
+									"value": "NY"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Peticion-4",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"postman.setNextRequest(\"Peticion-2\");"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url-echo}}/get",
+							"host": [
+								"{{url-echo}}"
+							],
+							"path": [
+								"get"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Peticion-5",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"postman.setNextRequest(\"Peticion-4\");"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url-echo}}/get",
+							"host": [
+								"{{url-echo}}"
+							],
+							"path": [
+								"get"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
