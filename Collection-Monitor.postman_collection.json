@@ -16,7 +16,13 @@
 							"listen": "test",
 							"script": {
 								"exec": [
-									"postman.setNextRequest(\"Peticion-3\");"
+									"postman.setNextRequest(\"Peticion-3\");\r",
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"pm.test(\"Body matches string\", function () {\r",
+									"    pm.expect(pm.response.text()).to.include(\"url\");\r",
+									"});"
 								],
 								"type": "text/javascript"
 							}
@@ -54,7 +60,10 @@
 							"listen": "test",
 							"script": {
 								"exec": [
-									"postman.setNextRequest(null);"
+									"postman.setNextRequest(null);\r",
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
 								],
 								"type": "text/javascript"
 							}
@@ -88,7 +97,13 @@
 							"listen": "test",
 							"script": {
 								"exec": [
-									"postman.setNextRequest(\"Peticion-5\");"
+									"postman.setNextRequest(\"Peticion-5\");\r",
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"pm.test(\"Response time is less than 200ms\", function () {\r",
+									"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+									"});"
 								],
 								"type": "text/javascript"
 							}
@@ -130,7 +145,10 @@
 							"listen": "test",
 							"script": {
 								"exec": [
-									"postman.setNextRequest(\"Peticion-2\");"
+									"postman.setNextRequest(\"Peticion-2\");\r",
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
 								],
 								"type": "text/javascript"
 							}
@@ -158,7 +176,10 @@
 							"listen": "test",
 							"script": {
 								"exec": [
-									"postman.setNextRequest(\"Peticion-4\");"
+									"postman.setNextRequest(\"Peticion-4\");\r",
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
 								],
 								"type": "text/javascript"
 							}
