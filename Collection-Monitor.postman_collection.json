@@ -17,7 +17,7 @@
 							"script": {
 								"exec": [
 									"postman.setNextRequest(\"Peticion-3\");\r",
-									"pm.test(\"Status code is 200\", function () {\r",
+									"pm.test(\"Status code is 201\", function () {\r",
 									"    pm.response.to.have.status(200);\r",
 									"});\r",
 									"pm.test(\"Body matches string\", function () {\r",
